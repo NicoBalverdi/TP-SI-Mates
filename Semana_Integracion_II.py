@@ -1,7 +1,6 @@
 # Funciones
 
 def es_bisiesto(año):
-   
     return (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0)
 
 def digito_comun(lista_conjuntos, digito):
@@ -33,10 +32,10 @@ while True:
         cantidad = int(input("Elija si ingresará 2 ó 4 DNI: "))
         while cantidad != 2 and cantidad != 4:
             cantidad = int(input("Elija si ingresará 2 ó 4 DNI: "))
-        for i in range(1, cantidad+1):
+        for i in range(0, cantidad):
             entrada = input("Ingrese el DNI: ")
-        if entrada.isdigit():
-            listaDNI.append(entrada)
+            if entrada.isdigit():
+                listaDNI.append(entrada)
     
         for dni in listaDNI:
             listaConjuntos.append(set(dni))
@@ -120,6 +119,4 @@ while True:
             print("Existe al menos un integrante del grupo que no pertenece al grupo Z")
 
     
-print("\nFin del programa.")
-# Manejar el flujo del programa para que una vez que el usuario termino con la primera operación seleccionada
-# vuelva a l menu para ejecutar la otra opción si asi lo desea o terminar la ejecución.
+print("Fin del programa.")

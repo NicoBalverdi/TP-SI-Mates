@@ -82,8 +82,27 @@ if opcion.lower() == "a":
         print(f"De los {len(listaConjuntos)}, hay {contador} conjuntos con una cantidad par de elementos por ende el grupo se considera par")
 
 elif opcion.lower() == "b":
-    # Trabajo con los años de nacimiento (borrar el pass.)
-    pass
+    años = []
+    print("Por favor ingrese 4 años de nacimiento")
+    while len(años) < 4:
+        entrada = int(input(f"Ingrese el año de nacimiento: "))
+        if entrada in años:
+            print("Año repetido, ingrese un año distinto.")
+        else:
+            años.append(entrada)
+
+    pares = 0
+    impares = 0
+    for entrada in años:
+        if entrada % 2 == 0:
+            pares += 1
+        else:
+            impares += 1
+    print(f"Cantidad de años pares: {pares}")
+    print(f"Cantidad de años impares: {impares}")
+    
+    if all(entrada > 2000 for entrada in años):
+        print("Todos los años ingresados pertenecen al grupo Z")
 else:
     print("Opción incorrecta")
 

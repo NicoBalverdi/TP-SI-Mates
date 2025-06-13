@@ -23,6 +23,7 @@ while True:
     print("Operaciones")
     print("A. Operaciones con multiples DNI")
     print("B. Operaciones con años de Nacimiento")
+    print("Presione ENTER para terminar.")
     opcion = input("Seleccione una opción: ")
     
     if not opcion: # Si el usuario solo presiona Enter, sale del bucle
@@ -110,8 +111,9 @@ while True:
         print(f"Cantidad de años pares: {pares}")
         print(f"Cantidad de años impares: {impares}")
         
-        if any(es_bisiesto(año) for año in años):
-                print("Tenemos un año especial.Es Bisiesto")
+        for year in años:
+            if es_bisiesto(year):
+                print(f"Tenemos un año especial. {year} Es bisiesto.")
         
         if all(entrada > 2000 for entrada in años):
             print("Todos los años ingresados pertenecen al grupo Z")

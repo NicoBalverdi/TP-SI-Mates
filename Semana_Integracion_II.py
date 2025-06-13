@@ -14,6 +14,7 @@ def suma_digitos(numero):
     return suma
 
 # Programa principal
+# ANDRES - LINEA 19 A 43
 while True:
     listaDNI = []
     listaConjuntos = []
@@ -41,6 +42,7 @@ while True:
         for dni in listaDNI:
             listaConjuntos.append(set(dni))
         
+#LINEA 46 A 78 - JUAN MARTINEZ
         for i in range(0, len(listaConjuntos)):
             print(f"A partir del DNI {listaDNI[i]} se obtuvo el conjunto: {listaConjuntos[i]}")
 
@@ -74,7 +76,7 @@ while True:
         for digito in set(dni):
             repite = string_dni.count(digito)
             print(f"El dígito {digito} se  repite {repite} veces en {string_dni}")
-    
+#LINEA 80 A 95 - JUAN BARBERO
         for dni in listaDNI:
             num = int(dni)
         print(f"La suma de los dígitos presentes en el DNI {dni} da como resultado: {suma_digitos(num)}")
@@ -90,7 +92,7 @@ while True:
 
         if contador > (len(listaConjuntos) / 2):
             print(f"De los {len(listaConjuntos)}, hay {contador} conjuntos con una cantidad par de elementos por ende el grupo se considera par")
-
+#LINEA 95 A FINAL DEL PROGRAMA - NICOLAS
     elif opcion.lower() == "b":
         años = []
         print("Por favor ingrese 4 años de nacimiento")
